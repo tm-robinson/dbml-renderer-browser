@@ -1,16 +1,13 @@
 const path = require('path');
 const webpack = require('webpack'); // Added missing import
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin'); // Added missing import
 
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, './dist'),
-    publicpath: ''
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [
@@ -26,7 +23,7 @@ module.exports = {
           },
           {
             test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, "css-loader"],
+            use: ["style-loader", "css-loader"],
           },
         ]
       },
@@ -43,11 +40,6 @@ module.exports = {
     },
   },
   plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
-    }),
     // fix "process is not defined" error:
     new webpack.ProvidePlugin({
       process: 'process/browser',

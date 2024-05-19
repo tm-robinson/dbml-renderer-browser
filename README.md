@@ -8,11 +8,12 @@ This was created as a response to [this github issue](https://github.com/softwar
 `npm install`
 `npm start`
 
-# Build the dist folder for use on a production webserver (currently broken)
+# Build the dist folder for use on a production webserver (and then run local python webserver to test it)
 
 `npm install`
-`npm build`
+`npm run build`
+`python3 -m http.server 8181 --directory dist`
 
 # Health Warning
 
-I am a complete novice at node, javascript and webpack, so I am sure there are a lot of ways to improve this.  Please raise a github issue or send me a PR if you have ideas, especially on reducing the size of the 
+I am a complete novice at node, javascript and webpack, so I am sure there are a lot of ways to improve this.  Please raise a github issue or send me a PR if you have ideas, especially on reducing the size of the distribution which is currently 20MB!
