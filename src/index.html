@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Renderer</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+    #text-input {
+      width: 25%;
+      height: 100%;
+      resize: horizontal;
+      border-right: 1px solid black; /* Added border to create a dividing line */
+      overflow: auto; /* Added to enable scrolling if content exceeds the visible area */
+    }
+    #text-input-textarea {
+      width: 100%;
+    }
+    #svg-container {
+      width: 75%;
+      height: 100%;
+      overflow: hidden;
+    }
+    svg {
+      width: 100%; /* Zoom the SVG to fit the available width */
+    }
+    .divider {
+      width: 5px;
+      cursor: col-resize;
+      background-color: #ccc;
+    }
+    #error-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 20%;
+      height: 20%;
+      background-color: rgba(255, 0, 0, 0.8);
+      color: white;
+      display: none;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="text-input">
+    <textarea id="text-input-textarea"></textarea>
+  </div>
+  <div id="divider" class="divider"></div>
+  <div id="svg-container"></div>
+  <div id="error-box"></div>
+  <script src="main.js"></script>
+</body>
+</html>
