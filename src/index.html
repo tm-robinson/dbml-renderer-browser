@@ -19,6 +19,11 @@
     }
     #text-input-textarea {
       width: 100%;
+      height: 85%; /* Set textarea height to 90% */
+    }
+    #file-upload {
+      width: 100%;
+      height: 10%; /* Set upload button height to 10% */
     }
     #svg-container {
       width: 75%;
@@ -50,6 +55,7 @@
 <body>
   <div id="text-input">
     <textarea id="text-input-textarea"></textarea>
+    <input type="file" id="file-upload" accept=".dbml">
   </div>
   <div id="divider" class="divider"></div>
   <div id="svg-container"></div>
