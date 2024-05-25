@@ -5,10 +5,11 @@ This was created as a response to [this github issue](https://github.com/softwar
 
 ## Developer mode
 
-Run in developer mode (runs on port 8282 and is accessible from any local IP):
+Run in developer mode (runs on port 8787 and is accessible from any local IP):
 
 * `npm install`
 * `npm start`
+* Navigate to http://127.0.0.1:8787
 
 ## Production mode
 
@@ -18,6 +19,7 @@ Build the dist folder for use on a production webserver (and then run local pyth
 * `npm install`
 * `npm run build`
 * `python3 -m http.server 8181 --directory dist`
+* Navigate to http://127.0.0.1:8181
 
 ## Health Warning
 
