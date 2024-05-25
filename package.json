@@ -1,7 +1,7 @@
 {
-  "name": "svg-renderer",
+  "name": "dbml-renderer",
   "version": "1.0.0",
-  "description": "SVG Renderer project",
+  "description": "DBML Renderer in a Browser",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --stats-children",
