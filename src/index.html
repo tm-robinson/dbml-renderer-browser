@@ -30,6 +30,11 @@
       height: 100%;
       overflow: hidden;
     }
+    #svg-content {
+      width: 100%;
+      height: 100%;
+      overflow: auto; /* Allow scrolling if SVG content exceeds container height */
+    }
     svg {
       width: 100%; /* Zoom the SVG to fit the available width */
     }
@@ -58,7 +63,9 @@
     <input type="file" id="file-upload" accept=".dbml">
   </div>
   <div id="divider" class="divider"></div>
-  <div id="svg-container"></div>
+  <div id="svg-container">
+    <div id="svg-content"></div>
+  </div>
   <div id="error-box"></div>
   <script src="main.js"></script>
 </body>

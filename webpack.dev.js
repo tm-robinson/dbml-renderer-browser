@@ -11,7 +11,7 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0', // Bind to 0.0.0.0
-    port: 8282, // Use port 8282
+    port: 8787, // Use port 8787
     static: {
       directory: path.join(__dirname, 'dist'),
     },

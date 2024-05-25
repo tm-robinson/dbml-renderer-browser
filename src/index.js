@@ -4,6 +4,7 @@ import vizRenderStringSync from "@aduh95/viz.js/sync";
 const textArea = document.getElementById('text-input-textarea');
 const textInput = document.getElementById('text-input')
 const svgContainer = document.getElementById('svg-container');
+const svgContent = document.getElementById('svg-content');
 const divider = document.getElementById('divider');
 const fileUpload = document.getElementById('file-upload');
 
@@ -73,8 +74,8 @@ function updateSvg() {
     const svgWidth = svgContainer.clientWidth;
     const errorBox = document.getElementById('error-box');
     try {
-        const svgContent = run(textArea.value, 'svg', { width: svgWidth }); // Call the run function with the DBML text, format 'svg', and width
-        svgContainer.innerHTML = svgContent;
+        const svgData = run(textArea.value, 'svg', { width: svgWidth }); // Call the run function with the DBML text, format 'svg', and width
+        svgContent.innerHTML = svgData;
         errorBox.style.display = 'none';
     } catch (error) {
         // Display the error box and show the error message
